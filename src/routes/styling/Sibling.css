@@ -1,0 +1,6 @@
+.sibling {
+  margin-top: 1em;
+  border: 1px solid green;
+  padding: 1em;
+  display: block;
+}

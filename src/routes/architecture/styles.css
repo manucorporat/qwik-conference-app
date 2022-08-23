@@ -1,0 +1,124 @@
+.browser {
+  display: block;
+  border: 1px solid black;
+  border-radius: 4px;
+  padding: 4px;
+  background-color: lightgray;
+  max-width: 600px;
+  margin: auto;
+}
+.browser-url {
+  display: flex;
+}
+.browser-url span {
+  font-size: 1.2em;
+  font-family: sans-serif;
+  padding-right: 0.2em;
+}
+.browser-url input {
+  flex: 1;
+}
+.browser-body {
+  margin-top: 3px;
+  border-radius: 4px;
+  background-color: white;
+  min-height: 300px;
+  border: 1px solid black;
+  padding: 4px;
+}
+q\:slot {
+  display: block;
+}
+
+component {
+  display: flex;
+  border: 2px solid lightgray;
+  margin: 3px;
+  padding: 3px;
+  min-width: 25px;
+}
+
+.app {
+  display: block;
+}
+.root {
+  flex-direction: column;
+}
+.left {
+  flex-direction: column;
+}
+
+.product-main {
+  width: 70%;
+  flex-direction: column;
+}
+
+.product-side {
+  flex-direction: column;
+  width: 30%;
+}
+.product {
+  width: 200px;
+  height: 200px;
+  margin: auto;
+}
+.product-details {
+  margin: auto;
+}
+
+.header {
+  margin: 4px;
+  display: flex;
+}
+.middle {
+  display: flex;
+}
+.left {
+  display: flex;
+  width: 100px;
+  margin-right: 4px;
+  min-height: 200px;
+  flex-wrap: wrap;
+}
+.main {
+  display: flex;
+  flex: 1;
+}
+.footer {
+  margin: 4px;
+  display: flex;
+  justify-content: space-evenly;
+}
+[arch="island"].header,
+[arch="island"].left,
+[arch="island"].main,
+[arch="island"].footer {
+  border-color: orange;
+}
+
+.hydrated {
+  border: 2px solid blue;
+  animation: flashBlue 0.3s;
+}
+
+@keyframes flashBlue {
+  5% {
+    box-shadow: 0px 0px 0px white;
+  }
+  10% {
+    box-shadow: 3px 3px 20px darkblue;
+  }
+  60% {
+    box-shadow: 3px 3px 10px blue;
+  }
+  100% {
+    box-shadow: 0px 0px 0px white;
+  }
+}
+
+ol > li {
+  color: lightgray;
+}
+li.active {
+  color: black;
+}
