@@ -1,11 +1,8 @@
-import { component$, useStyles$ } from '@builder.io/qwik';
-import { useLocation } from '@builder.io/qwik-city';
+import { component$, useStylesScoped$ } from '@builder.io/qwik';
 import styles from './header.css?inline';
 
 export default component$(() => {
-  useStyles$(styles);
-
-  const pathname = useLocation().pathname;
+  useStylesScoped$(styles);
 
   return (
     <header>

@@ -15,7 +15,7 @@ export default component$(() => {
 
     return (
       <story>
-        <Resource resource={story}
+        <Resource value={story}
         onResolved={(story) => {
           return (
             <div class="item-view">

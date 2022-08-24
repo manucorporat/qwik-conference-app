@@ -26,7 +26,7 @@ export default component$(
     });
     return (
       <stories>
-        <Resource resource={stories}
+        <Resource value={stories}
         onResolved={({stories, page, type}) => {
           return (
             <div class="news-view">

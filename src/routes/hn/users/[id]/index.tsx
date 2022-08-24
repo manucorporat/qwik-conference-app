@@ -15,7 +15,7 @@ export default component$(() => {
 
     return (
       <user>
-        <Resource resource={user}
+        <Resource value={user}
         onResolved={(user) => {
           return (
             <div class="user-view">

@@ -78,6 +78,13 @@ export default component$(() => {
           <td>SSR streaming demo</td>
         </tr>
         <tr>
+          <td>⚛️</td>
+          <td>
+            <a href="/qwik-react">QwikReact</a>
+          </td>
+          <td>Qwik React demo using Threejs</td>
+        </tr>
+        <tr>
           <td>*️⃣</td>
           <td>
             <a href="/all">All</a>

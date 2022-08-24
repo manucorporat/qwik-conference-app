@@ -15,7 +15,14 @@ export default component$(() => {
         >
           Click
         </button>
-        <button onClick$={() => console.log("ABC")}>Hello</button>
+        <button
+          onClick$={() => {
+            console.log("Click Alert");
+            alert('I am an Alert!!');
+          }}
+        >
+          Alert
+        </button>
       </p>
     </div>
   );
