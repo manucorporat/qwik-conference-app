@@ -1,4 +1,9 @@
-import { component$, Resource, useResource$, useStylesScoped$ } from "@builder.io/qwik";
+import {
+  component$,
+  Resource,
+  useResource$,
+  useStylesScoped$,
+} from "@builder.io/qwik";
 
 export function delay(time: number) {
   return new Promise<void>((resolve) => {
@@ -31,12 +36,15 @@ export const Cmp = component$((props: { text: string; delay: number }) => {
   }`);
 
   const resource = useResource$<string>(async ({ track }) => {
-    track(props, 'text');
+    track(props, "text");
     await delay(props.delay);
     return props.text;
   });
 
   return (
-    <Resource value={resource} onResolved={(value) => <div class="cmp">{value}</div>} />
+    <Resource
+      value={resource}
+      onResolved={(value) => <div class="cmp">{value}</div>}
+    />
   );
 });

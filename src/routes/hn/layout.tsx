@@ -1,5 +1,5 @@
 import { component$, Slot, useStyles$ } from "@builder.io/qwik";
-import main from './main.css?inline'
+import main from "./main.css?inline";
 
 export default component$(() => {
   useStyles$(main);
@@ -34,7 +34,7 @@ export default component$(() => {
           </nav>
         </header>
       </nav>
-      <Slot/>
+      <Slot />
     </>
   );
 });

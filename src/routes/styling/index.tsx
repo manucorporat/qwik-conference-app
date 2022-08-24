@@ -20,25 +20,21 @@ export default component$(() => {
   );
 });
 
-export const Child = component$(
-  () => {
-    useStylesScoped$(ChildCSS);
-    return (
-      <child class="child">
-        <div>Child</div>
-      </child>
-    );
-  },
-);
+export const Child = component$(() => {
+  useStylesScoped$(ChildCSS);
+  return (
+    <child class="child">
+      <div>Child</div>
+    </child>
+  );
+});
 
-export const Sibling = component$(
-  () => {
-    useStylesScoped$(SiblingCSS);
+export const Sibling = component$(() => {
+  useStylesScoped$(SiblingCSS);
 
-    return (
-      <sibling class="sibling">
-        <div>Sibling</div>
-      </sibling>
-    );
-  },
-);
+  return (
+    <sibling class="sibling">
+      <div>Sibling</div>
+    </sibling>
+  );
+});

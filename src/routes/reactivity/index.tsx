@@ -5,51 +5,49 @@ interface State {
   debouncedCount: number;
 }
 
-export default component$(
-  () => {
-    const store = useStore<State>({
-      count: 0,
-      debouncedCount: 0,
-    });
+export default component$(() => {
+  const store = useStore<State>({
+    count: 0,
+    debouncedCount: 0,
+  });
 
-    useWatch$(({track}) => {
-      // track changes in store.count
-      track(store, "count");
-      console.log("count changed");
+  useWatch$(({ track }) => {
+    // track changes in store.count
+    track(store, "count");
+    console.log("count changed");
 
-      const timer = setTimeout(() => {
-        store.debouncedCount = store.count;
-      }, 2000);
-      return () => clearTimeout(timer);
-    });
+    const timer = setTimeout(() => {
+      store.debouncedCount = store.count;
+    }, 2000);
+    return () => clearTimeout(timer);
+  });
 
-    console.log("<Reactivity> renders");
-    return (
-      <reactivity>
-        <Child state={store} />
-        <button id="add" onClick$={() => store.count++}>
-          +
-        </button>
-      </reactivity>
-    );
-  },
-);
+  console.log("<Reactivity> renders");
+  return (
+    <reactivity>
+      <Child state={store} />
+      <button id="add" onClick$={() => store.count++}>
+        +
+      </button>
+    </reactivity>
+  );
+});
 
-export const Child = component$(
-  (props: { state: State }) => {
-    console.log("<Child> render");
-    return (
-      <child>
-        <div id="child">{props.state.count}</div>
-        <GrandChild state={props.state} />
-      </child>
-    );
-  },
-);
+export const Child = component$((props: { state: State }) => {
+  console.log("<Child> render");
+  return (
+    <child>
+      <div id="child">{props.state.count}</div>
+      <GrandChild state={props.state} />
+    </child>
+  );
+});
 
-export const GrandChild = component$(
-  (props: { state: State }) => {
-    console.log("<GrandChild> render");
-    return <grandchild id="debounced">Debounced: {props.state.debouncedCount}</grandchild>;
-  },
-);
+export const GrandChild = component$((props: { state: State }) => {
+  console.log("<GrandChild> render");
+  return (
+    <grandchild id="debounced">
+      Debounced: {props.state.debouncedCount}
+    </grandchild>
+  );
+});

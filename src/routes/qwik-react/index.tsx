@@ -8,5 +8,5 @@ export default component$(() => {
       <MUIButton></MUIButton>
       <ThreeJS client:visible></ThreeJS>
     </>
-  )
+  );
 });

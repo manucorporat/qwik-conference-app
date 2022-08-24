@@ -1,9 +1,4 @@
-import {
-  component$,
-  Slot,
-  useStore,
-  useStyles$,
-} from "@builder.io/qwik";
+import { component$, Slot, useStore, useStyles$ } from "@builder.io/qwik";
 
 import CSS from "./styles.css?inline";
 /* eslint no-console: ["off"] */
@@ -75,27 +70,25 @@ export const ArchExamples = component$(
   }
 );
 
-export const Browser = component$(
-  (props: {class?: string}) => {
-    return (
-      <browser class="browser" {...props}>
-        <div class="browser-url">
-          <span>⇦ ⇨ ⟳</span>
-          <input value="http://localhost/" />
-        </div>
-        <div class="browser-body">
-          <Slot />
-        </div>
-      </browser>
-    );
-  },
-);
+export const Browser = component$((props: { class?: string }) => {
+  return (
+    <browser class="browser" {...props}>
+      <div class="browser-url">
+        <span>⇦ ⇨ ⟳</span>
+        <input value="http://localhost/" />
+      </div>
+      <div class="browser-body">
+        <Slot />
+      </div>
+    </browser>
+  );
+});
 
 export const Component = component$(
-  (props: { cmp: Cmp; arch: ArchMode, class?: string }) => {
+  (props: { cmp: Cmp; arch: ArchMode; class?: string }) => {
     return (
       <component
-        class={getCmpClass(props.cmp, props.class ?? '')}
+        class={getCmpClass(props.cmp, props.class ?? "")}
         onClick$={async (event) => {
           // const element = useHostElement();
           const element = (event as any).processed ? null : event.target;
@@ -125,7 +118,7 @@ export const Component = component$(
         {props.cmp.children ? null : "..."}
       </component>
     );
-  },
+  }
 );
 
 export function getCmpClass(cmp: Cmp, ...additionalClasses: string[]) {

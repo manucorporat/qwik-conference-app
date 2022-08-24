@@ -2,15 +2,15 @@ import { component$, useStore } from "@builder.io/qwik";
 
 export default component$(() => {
   const store = useStore({ count: 0 });
-  console.log('Render Root');
+  console.log("Render Root");
   return (
     <div>
-      <CounterChild store={store}/>
+      <CounterChild store={store} />
       <p>
         <button
           onClick$={() => {
-            console.log('Click');
-            store.count++
+            console.log("Click");
+            store.count++;
           }}
         >
           Click
@@ -18,7 +18,7 @@ export default component$(() => {
         <button
           onClick$={() => {
             console.log("Click Alert");
-            alert('I am an Alert!!');
+            alert("I am an Alert!!");
           }}
         >
           Alert
@@ -28,13 +28,12 @@ export default component$(() => {
   );
 });
 
-export const CounterChild = component$((props: {store: {count: number}}) => {
-  console.log('Render CounterChild');
-  return (
-    <p>Count: {props.store.count}</p>
-  )
-});
-
+export const CounterChild = component$(
+  (props: { store: { count: number } }) => {
+    console.log("Render CounterChild");
+    return <p>Count: {props.store.count}</p>;
+  }
+);
 
 ////////////////////////////////////////////////////////////////////////////////
 
