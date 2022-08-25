@@ -1,6 +1,7 @@
 import {
   component$,
   Resource,
+  SSRStreamBlock,
   useResource$,
   useStylesScoped$,
 } from "@builder.io/qwik";
@@ -14,11 +15,18 @@ export function delay(time: number) {
 export default component$(() => {
   return (
     <div>
-      <Cmp text="this 1" delay={1000}></Cmp>
-      <Cmp text="this 2" delay={2000}></Cmp>
+      {/* {delay(1000).then(() => <div>1</div>)}
+      {delay(2000).then(() => <div>2</div>)}
+      {delay(3000).then(() => <div>3</div>)} */}
+
+      <SSRStreamBlock>
+        <Cmp text="this 1" delay={1000}></Cmp>
+        <Cmp text="this 2" delay={2000}></Cmp>
+      </SSRStreamBlock>
+
       <Cmp text="this 3" delay={3000}></Cmp>
       <Cmp text="this 4" delay={4000}></Cmp>
-      <Cmp text="this 5" delay={3000}></Cmp>
+      <Cmp text="this 5" delay={5000}></Cmp>
     </div>
   );
 });

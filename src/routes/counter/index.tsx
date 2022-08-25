@@ -2,18 +2,18 @@ import { component$, useStore } from "@builder.io/qwik";
 
 export default component$(() => {
   const store = useStore({ count: 0 });
-  console.log("Render Root");
+  console.log("Render CounterRoot");
   return (
     <div>
       <CounterChild store={store} />
       <p>
         <button
           onClick$={() => {
-            console.log("Click");
+            console.log("Click Increment");
             store.count++;
           }}
         >
-          Click
+          Increment
         </button>
         <button
           onClick$={() => {

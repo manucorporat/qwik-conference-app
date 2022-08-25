@@ -6,7 +6,7 @@ import { Button } from "@mui/material";
 export function App() {
   return (
     <>
-      <Button>Button</Button>
+      <Button variant="outlined">MUI Button</Button>
     </>
   );
 }
