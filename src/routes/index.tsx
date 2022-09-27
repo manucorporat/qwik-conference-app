@@ -83,6 +83,13 @@ export default component$(() => {
           <td>Qwik React demo using Threejs</td>
         </tr>
         <tr>
+          <td>📦</td>
+          <td>
+            <a href="/container">Containers</a>
+          </td>
+          <td>Microfrontend</td>
+        </tr>
+        <tr>
           <td>*️⃣</td>
           <td>
             <a href="/all">All</a>
