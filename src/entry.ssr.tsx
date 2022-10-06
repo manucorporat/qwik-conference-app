@@ -1,4 +1,4 @@
-import { renderToString } from "@builder.io/qwik-react";
+import { renderToStream as reactToStream } from "@builder.io/qwik-react";
 import { renderToStream, RenderToStreamOptions } from "@builder.io/qwik/server";
 import { manifest } from "@qwik-client-manifest";
 import Root from "./root";
@@ -12,7 +12,7 @@ export default function (opts: RenderToStreamOptions) {
   const url = (opts.envData?.url as string) ?? "";
   const isReact = url.includes("qwik-react");
   if (isReact) {
-    return renderToString(<Root />, {
+    return reactToStream(<Root />, {
       manifest,
       ...opts,
     });

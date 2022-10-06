@@ -8,5 +8,5 @@ export default component$(() => {
       <RemoteApp name="body" />
       <RemoteApp name="footer" />
     </>
-  )
-})
+  );
+});
