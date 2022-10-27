@@ -1,7 +1,6 @@
 import { component$, useSignal } from '@builder.io/qwik';
 import type { DocumentHead } from '@builder.io/qwik-city';
 import { MUIAlert, MUIButton, MUISlider, TableApp } from '~/integrations/react/mui';
-import { ThreeJS } from '~/integrations/react/threejs';
 
 export default component$(() => {
   const show = useSignal(false);
@@ -38,7 +37,6 @@ export default component$(() => {
         <QwikCounter></QwikCounter>
       </MUIAlert>
 
-      <ThreeJS />
       <button onClick$={() => (show.value = true)}>Show table</button>
       {show.value && <TableApp client:visible>Slider is {count.value}</TableApp>}
     </>

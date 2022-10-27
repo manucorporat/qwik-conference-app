@@ -8,7 +8,7 @@ export default component$(() => {
       <nav>
         <header class="header">
           <nav class="inner">
-            <a href="/hn/">
+            <a href="/hn/top">
               <strong>HN</strong>
             </a>
             <a href="/hn/new">

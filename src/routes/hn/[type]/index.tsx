@@ -27,6 +27,7 @@ export default component$(() => {
     <stories>
       <Resource
         value={stories}
+        onPending={() => <div>Loading</div>}
         onResolved={({ stories, page, type }) => {
           return (
             <div class="news-view">
@@ -34,7 +35,7 @@ export default component$(() => {
                 {page > 1 ? (
                   <a
                     class="page-link"
-                    href={`/hn/${type}/?page=${page - 1}`}
+                    href={`/hn/${type}?page=${page - 1}`}
                     aria-label="Previous Page"
                   >
                     {"<"} prev
@@ -48,7 +49,7 @@ export default component$(() => {
                 {stories && stories.length >= 29 ? (
                   <a
                     class="page-link"
-                    href={`/hn/?type=${type}&page=${page + 1}`}
+                    href={`/hn/${type}?page=${page + 1}`}
                     aria-label="Next Page"
                   >
                     more {">"}

@@ -27,6 +27,11 @@ export const Head = component$(() => {
       ))}
 
       <Social />
+      <script dangerouslySetInnerHTML={`
+      document.addEventListener('qsymbol', (ev) => {
+        console.debug('symbol:', ev.detail.symbol);
+      });
+      `}/>
     </head>
   );
 });
