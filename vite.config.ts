@@ -13,6 +13,10 @@ export default defineConfig(() => {
         '@react-three/fiber',
       ],
     },
+    build: {
+      sourcemap: true,
+      minify: false,
+    },
     plugins: [
       qwikCity(),
       qwikVite({

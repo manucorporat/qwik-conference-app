@@ -11,9 +11,10 @@
     "dev.debug": "node --inspect-brk ./node_modules/vite/bin/vite.js --mode ssr --force",
     "fmt": "prettier --write .",
     "fmt.check": "prettier --check .",
-    "preview": "qwik build preview && vite preview --open",
-    "serve": "node server/entry.express",
+    "preview": "qwik build preview && node --inspect-brk ./node_modules/vite/bin/vite.js preview --open",
+    "serve": "node --inspect-brk server/entry.express",
     "start": "vite --open --mode ssr",
+    "lint": "eslint src/**/*.ts*",
     "qwik": "qwik"
   },
   "devDependencies": {

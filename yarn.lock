@@ -223,10 +223,9 @@
   "resolved" "https://registry.npmjs.org/@builder.io/qwik-react/-/qwik-react-0.1.1.tgz"
   "version" "0.1.1"
 
-"@builder.io/qwik@>=0.1.11", "@builder.io/qwik@0.12.0":
-  "integrity" "sha512-iIsbGO8bZhOMOJ/MmHcaXdsWWVCQIKD1LNQTERtePA695RB3jlmj7HQq4wMSNRRFEdeMKB2t/vmYFDjRJQWRNw=="
-  "resolved" "https://registry.npmjs.org/@builder.io/qwik/-/qwik-0.12.0.tgz"
-  "version" "0.12.0"
+"@builder.io/qwik@>=0.1.11", "@builder.io/qwik@file:../qwik/packages/qwik/dist":
+  "resolved" "file:../qwik/packages/qwik/dist"
+  "version" "0.12.1-dev20221028175530"
 
 "@cush/relative@^1.0.0":
   "integrity" "sha512-RpfLEtTlyIxeNPGKcokS+p3BZII/Q3bYxryFRglh5H3A3T8q9fsLYm72VYAMEOOIBLEa8o93kFLiBDUWKrwXZA=="
@@ -1320,10 +1319,9 @@
   "resolved" "https://registry.npmjs.org/escape-string-regexp/-/escape-string-regexp-4.0.0.tgz"
   "version" "4.0.0"
 
-"eslint-plugin-qwik@0.0.103":
-  "integrity" "sha512-ta6yOpgNMbEp+KG3W1MYlh32HD+1+i2QjRpJr78d1WkcF0H3vvI2uD7FWp2Su7NJWvuiLnPuirphFICClYL28A=="
-  "resolved" "https://registry.npmjs.org/eslint-plugin-qwik/-/eslint-plugin-qwik-0.0.103.tgz"
-  "version" "0.0.103"
+"eslint-plugin-qwik@file:../qwik/packages/eslint-plugin-qwik/dist":
+  "resolved" "file:../qwik/packages/eslint-plugin-qwik/dist"
+  "version" "0.12.1"
 
 "eslint-scope@^5.1.1":
   "integrity" "sha512-2NxwbF/hZ0KpepYN0cNbo+FN6XoK7GaHlQhgx/hIZl6Va0bF45RQOOwhLIy8lQDbuCiadSLCBnH2CFYquit5bw=="
@@ -1358,7 +1356,7 @@
   "resolved" "https://registry.npmjs.org/eslint-visitor-keys/-/eslint-visitor-keys-3.3.0.tgz"
   "version" "3.3.0"
 
-"eslint@*", "eslint@^6.0.0 || ^7.0.0 || ^8.0.0", "eslint@>= 8", "eslint@>=5", "eslint@8.20.0":
+"eslint@*", "eslint@^6.0.0 || ^7.0.0 || ^8.0.0", "eslint@>=5", "eslint@8.20.0":
   "integrity" "sha512-d4ixhz5SKCa1D6SCPrivP7yYVi7nyD6A4vs6HIAul9ujBzcEmZVM3/0NN/yu5nKhmO1wjp5xQ46iRfmDGlOviA=="
   "resolved" "https://registry.npmjs.org/eslint/-/eslint-8.20.0.tgz"
   "version" "8.20.0"

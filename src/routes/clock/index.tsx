@@ -9,6 +9,7 @@ import styles from "./clock.css?inline";
 export default component$(() => {
   const items = new Array(60).fill(null).map((_, index) => "item " + index);
 
+  console.log('PARENT');
   return (
     <div>
       <p onClick$={() => console.log("test")}>
@@ -52,6 +53,7 @@ export const Clock = component$(() => {
     const tmrId = setInterval(update, 1000);
     return () => clearInterval(tmrId);
   });
+  debugger;
 
   console.log("Render Clock");
   return (
