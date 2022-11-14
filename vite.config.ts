@@ -14,13 +14,15 @@ export default defineConfig(() => {
       ],
     },
     build: {
-      sourcemap: true,
+      cssCodeSplit: false,
       minify: false,
     },
     plugins: [
       qwikCity(),
       qwikVite({
-        entryStrategy: { type: "hook" },
+        entryStrategy: {
+          type: "single",
+        },
       }),
       qwikReact(),
       tsconfigPaths(),

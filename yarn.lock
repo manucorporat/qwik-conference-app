@@ -225,7 +225,7 @@
 
 "@builder.io/qwik@>=0.1.11", "@builder.io/qwik@file:../qwik/packages/qwik/dist":
   "resolved" "file:../qwik/packages/qwik/dist"
-  "version" "0.12.1-dev20221028175530"
+  "version" "0.12.1-dev20221106155413"
 
 "@cush/relative@^1.0.0":
   "integrity" "sha512-RpfLEtTlyIxeNPGKcokS+p3BZII/Q3bYxryFRglh5H3A3T8q9fsLYm72VYAMEOOIBLEa8o93kFLiBDUWKrwXZA=="
@@ -1271,7 +1271,7 @@
   "resolved" "https://registry.npmjs.org/esbuild-darwin-arm64/-/esbuild-darwin-arm64-0.15.9.tgz"
   "version" "0.15.9"
 
-"esbuild@^0.15.6":
+"esbuild@^0.15.9":
   "integrity" "sha512-OnYr1rkMVxtmMHIAKZLMcEUlJmqcbxBz9QoBU8G9v455na0fuzlT/GLu6l+SRghrk0Mm2fSSciMmzV43Q8e0Gg=="
   "resolved" "https://registry.npmjs.org/esbuild/-/esbuild-0.15.9.tgz"
   "version" "0.15.9"
@@ -1319,9 +1319,10 @@
   "resolved" "https://registry.npmjs.org/escape-string-regexp/-/escape-string-regexp-4.0.0.tgz"
   "version" "4.0.0"
 
-"eslint-plugin-qwik@file:../qwik/packages/eslint-plugin-qwik/dist":
-  "resolved" "file:../qwik/packages/eslint-plugin-qwik/dist"
-  "version" "0.12.1"
+"eslint-plugin-qwik@0.0.103":
+  "integrity" "sha512-ta6yOpgNMbEp+KG3W1MYlh32HD+1+i2QjRpJr78d1WkcF0H3vvI2uD7FWp2Su7NJWvuiLnPuirphFICClYL28A=="
+  "resolved" "https://registry.npmjs.org/eslint-plugin-qwik/-/eslint-plugin-qwik-0.0.103.tgz"
+  "version" "0.0.103"
 
 "eslint-scope@^5.1.1":
   "integrity" "sha512-2NxwbF/hZ0KpepYN0cNbo+FN6XoK7GaHlQhgx/hIZl6Va0bF45RQOOwhLIy8lQDbuCiadSLCBnH2CFYquit5bw=="
@@ -1356,7 +1357,7 @@
   "resolved" "https://registry.npmjs.org/eslint-visitor-keys/-/eslint-visitor-keys-3.3.0.tgz"
   "version" "3.3.0"
 
-"eslint@*", "eslint@^6.0.0 || ^7.0.0 || ^8.0.0", "eslint@>=5", "eslint@8.20.0":
+"eslint@*", "eslint@^6.0.0 || ^7.0.0 || ^8.0.0", "eslint@>= 8", "eslint@>=5", "eslint@8.20.0":
   "integrity" "sha512-d4ixhz5SKCa1D6SCPrivP7yYVi7nyD6A4vs6HIAul9ujBzcEmZVM3/0NN/yu5nKhmO1wjp5xQ46iRfmDGlOviA=="
   "resolved" "https://registry.npmjs.org/eslint/-/eslint-8.20.0.tgz"
   "version" "8.20.0"
@@ -2631,10 +2632,10 @@
   "resolved" "https://registry.npmjs.org/picomatch/-/picomatch-2.3.1.tgz"
   "version" "2.3.1"
 
-"postcss@^8.4.16":
-  "integrity" "sha512-ipHE1XBvKzm5xI7hiHCZJCSugxvsdq2mPnsq5+UF+VHCjiBvtDrlxJfMBToWaP9D5XlgNmcFGqoHmUn0EYEaRQ=="
-  "resolved" "https://registry.npmjs.org/postcss/-/postcss-8.4.16.tgz"
-  "version" "8.4.16"
+"postcss@^8.4.18":
+  "integrity" "sha512-Wi8mWhncLJm11GATDaQKobXSNEYGUHeQLiQqDFG1qQ5UTDPTEvKw0Xt5NsTpktGTwLps3ByrWsBrG0rB8YQ9oA=="
+  "resolved" "https://registry.npmjs.org/postcss/-/postcss-8.4.18.tgz"
+  "version" "8.4.18"
   dependencies:
     "nanoid" "^3.3.4"
     "picocolors" "^1.0.0"
@@ -2858,10 +2859,10 @@
   dependencies:
     "glob" "^7.1.3"
 
-"rollup@~2.78.0":
-  "integrity" "sha512-VeeCgtGi4P+o9hIg+xz4qQpRl6R401LWEXBmxYKOV4zlF82lyhgh2hTZnheFUbANE8l2A41F458iwj2vEYaXJg=="
-  "resolved" "https://registry.npmjs.org/rollup/-/rollup-2.78.1.tgz"
-  "version" "2.78.1"
+"rollup@^2.79.1":
+  "integrity" "sha512-uKxbd0IhMZOhjAiD5oAFp7BqvkA4Dv47qpOCtaNvng4HBwdbWtdOh8f5nZNuk2rp51PMGk3bzfWu5oayNEuYnw=="
+  "resolved" "https://registry.npmjs.org/rollup/-/rollup-2.79.1.tgz"
+  "version" "2.79.1"
   optionalDependencies:
     "fsevents" "~2.3.2"
 
@@ -3332,15 +3333,15 @@
     "recrawl-sync" "^2.0.3"
     "tsconfig-paths" "^4.0.0"
 
-"vite@>2.0.0-0", "vite@3.1.3":
-  "integrity" "sha512-/3XWiktaopByM5bd8dqvHxRt5EEgRikevnnrpND0gRfNkrMrPaGGexhtLCzv15RcCMtV2CLw+BPas8YFeSG0KA=="
-  "resolved" "https://registry.npmjs.org/vite/-/vite-3.1.3.tgz"
-  "version" "3.1.3"
+"vite@>2.0.0-0", "vite@3.2.1":
+  "integrity" "sha512-ADtMkfHuWq4tskJsri2n2FZkORO8ZyhI+zIz7zTrDAgDEtct1jdxOg3YsZBfHhKjmMoWLOSCr+64qrEDGo/DbQ=="
+  "resolved" "https://registry.npmjs.org/vite/-/vite-3.2.1.tgz"
+  "version" "3.2.1"
   dependencies:
-    "esbuild" "^0.15.6"
-    "postcss" "^8.4.16"
+    "esbuild" "^0.15.9"
+    "postcss" "^8.4.18"
     "resolve" "^1.22.1"
-    "rollup" "~2.78.0"
+    "rollup" "^2.79.1"
   optionalDependencies:
     "fsevents" "~2.3.2"
 

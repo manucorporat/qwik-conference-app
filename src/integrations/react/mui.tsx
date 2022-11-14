@@ -6,7 +6,7 @@ import { DataGrid, GridColDef, GridValueGetterParams } from '@mui/x-data-grid';
 
 export const MUIButton = qwikify$(Button);
 export const MUIAlert = qwikify$(Alert);
-export const MUISlider = qwikify$(Slider, { eagerness: 'hover' });
+export const MUISlider = qwikify$(Slider, {clientOnly: true});
 
 export const TableApp = qwikify$(() => {
   const columns: GridColDef[] = [
@@ -45,7 +45,6 @@ export const TableApp = qwikify$(() => {
   return (
     <>
       <h1>Hello from React</h1>
-
       <div style={{ height: 400, width: '100%' }}>
         <DataGrid
           rows={rows}

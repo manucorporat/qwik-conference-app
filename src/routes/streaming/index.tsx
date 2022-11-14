@@ -18,14 +18,12 @@ export default component$(() => {
   return (
     <div>
       <SSRStreamBlock>
-      <Cmp text="this 1" delay={1000}></Cmp>
-      <Cmp text="this 2" delay={2000}></Cmp>
+        <Cmp text="this 1" delay={1000}></Cmp>
+        <Cmp text="this 2" delay={2000}></Cmp>
       </SSRStreamBlock>
       <Cmp text="this 3" delay={3000}></Cmp>
-      <SSRStreamBlock>
-        <Cmp text="this 4" delay={4000}></Cmp>
-        <Cmp text="this 5" delay={5000}></Cmp>
-      </SSRStreamBlock>
+      <Cmp text="this 4" delay={4000}></Cmp>
+      <Cmp text="this 5" delay={2000}></Cmp>
     </div>
   );
 });
@@ -51,6 +49,7 @@ export const Cmp = component$((props: { text: string; delay: number }) => {
   return (
     <Resource
       value={resource}
+      onPending={() => <div className="cmp">Loading...</div>}
       onResolved={(value) => <div class="cmp">{value}</div>}
     />
   );
